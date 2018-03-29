@@ -26,10 +26,10 @@ import {
 
 export default class ForgotPassword extends Component {
 	static navigationOptions = {
-		title: 'Rádio Hits',
-		headerTintColor: '#164194',
+		title: 'RECUPERAR SENHA',
+		headerTintColor: '#FFFFFF',
 		headerStyle: {
-			backgroundColor: '#FFDD00',
+			backgroundColor: '#B72E33',
 		},
 
 

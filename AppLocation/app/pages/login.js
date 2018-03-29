@@ -41,6 +41,7 @@ const saeInput = (
 
 export default class Login extends Component {
 	static navigationOptions = {
+		headerBackTitle: null,
 		title: 'ENTRAR',
 		headerTintColor: '#FFFFFF',
 		headerStyle: {
