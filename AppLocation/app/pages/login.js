@@ -22,7 +22,10 @@ import {
 } from 'react-navigation';
 
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+
 import { Sae } from 'react-native-textinput-effects';
+
+import styles from '../styles/loginStyle';
 
 var ButtonComponent = require('./../components/buttonComponent');
 
@@ -57,48 +60,27 @@ export default class Login extends Component {
 
 	componentWillMount() {
 		this._panResponder = PanResponder.create({
-			// Ask to be the responder:
 			onStartShouldSetPanResponder: (evt, gestureState) => true,
-			//onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
 			onMoveShouldSetPanResponder: (evt, gestureState) => true,
 			onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
-
-			onPanResponderGrant: (evt, gestureState) => {
-				// The gesture has started. Show visual feedback so the user knows
-				// what is happening!
-
-				// gestureState.d{x,y} will be set to zero now
-			},
-			onPanResponderMove: (evt, gestureState) => {
-				// The most recent move distance is gestureState.move{X,Y}
-
-				// The accumulated gesture distance since becoming responder is
-				// gestureState.d{x,y}
-			},
+			onPanResponderGrant: (evt, gestureState) => { },
+			onPanResponderMove: (evt, gestureState) => { },
 			onPanResponderTerminationRequest: (evt, gestureState) => true,
-			onPanResponderRelease: (evt, gestureState) => {
-				// The user has released all touches while this view is the
-				// responder. This typically means a gesture has succeeded
-			},
-			onPanResponderTerminate: (evt, gestureState) => {
-				// Another component has become the responder, so this gesture
-				// should be cancelled
-			},
+			onPanResponderRelease: (evt, gestureState) => { },
+			onPanResponderTerminate: (evt, gestureState) => { },
 			onShouldBlockNativeResponder: (evt, gestureState) => {
-				// Returns whether this component should block native components from becoming the JS
-				// responder. Returns true by default. Is currently only supported on android.
 				return true;
 			},
 		});
 	}
+	
 	render() {
 
 		const { navigate } = this.props.navigation;
 
 		return (
-				<Image source={require('../assets/img/background.png')} style={{ flex: 1, width: null, height: null }}>
-					<View style={{ flex: 1, flexDirection: 'column' }}>
-						<Image source={require('../assets/img/loginLogo.png')} style={{ alignSelf: 'center', marginTop: 30,height:130, width:130  }} />
+					<View style={StyleSheet.flatten(styles.viewBackground)}>
+						<Image source={require('../assets/img/loginLogo.png')} style={StyleSheet.flatten(styles.imgLogo)} />
 
 						<Sae
 							style={{ margin: 20, height:10, width:null }}
@@ -122,12 +104,11 @@ export default class Login extends Component {
 						/>
 
 						<ButtonComponent labelButton={'ENTRAR'} />
-						<Button transparent style={{alignSelf:'center'}} >
-       <Text style ={{fontSize: 12,alignSelf:'center', color:"#923637"}} onPress={() =>navigate('ForgotPassword')}>Esqueceu a senha?</Text>
+						<Button transparent style={StyleSheet.flatten(styles.buttonTransparent)} >
+       <Text style={StyleSheet.flatten(styles.textButton)} onPress={() =>navigate('ForgotPassword')}>Esqueceu a senha?</Text>
        </Button>
 
 					</View>
-				</Image>
 				);
 
 
