@@ -16,7 +16,7 @@ import {
   NavigationActions
 } from 'react-navigation';
 
-
+const splash = require('../assets/img/splash.png');
 
 export default class Splash  extends Component {
 
@@ -42,7 +42,7 @@ export default class Splash  extends Component {
 	render(){
 		return(
 			<View>
-			<Image source={require('../assets/img/splash.png')}/>
+			<Image source={splash} style={{height: null, width: null}}/>
 			</View>
 			);
 	}
