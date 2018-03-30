@@ -66,44 +66,44 @@ export default class Login extends Component {
 			},
 		});
 	}
-	
+
 	render() {
 
 		const { navigate } = this.props.navigation;
 
 		return (
-			<Image source={require('../assets/img/background.png')}  style={StyleSheet.flatten(styles.backgroundImage)}>
-        		<View style={StyleSheet.flatten(styles.viewBackground)} {...this._panResponder.panHandlers}>
-						<Image source={require('../assets/img/loginLogo.png')} style={StyleSheet.flatten(styles.imgLogo)} />
+			<Image source={require('../assets/img/background.png')} style={StyleSheet.flatten(styles.backgroundImage)}>
+				<View style={StyleSheet.flatten(styles.viewBackground)} {...this._panResponder.panHandlers}>
+					<Image source={require('../assets/img/loginLogo.png')} style={StyleSheet.flatten(styles.imgLogo)} />
 
-						<Sae
-							style={{ margin: 20, height:10, width:null }}
-							label={'username'}
-							iconClass={FontAwesomeIcon}
-							iconName={'pencil'}
-							iconColor={'#000000'}
-							iconSize={20}
-							labelStyle={{ color: '#7C7C7C' }}
-							inputStyle={{ color: '#7C7C7C' }}
-						/>
-						<Sae
-							style={{ margin: 20, }}
-							label={'senha'}
-							iconClass={FontAwesomeIcon}
-							iconName={'pencil'}
-							iconColor={'#000000'}
-							iconSize={20}
-							labelStyle={{ color: '#7C7C7C' }}
-							inputStyle={{ color: '#7C7C7C' }}
-						/>
+					<Sae
+						style={{ margin: 20, height: 10, width: null }}
+						label={'username'}
+						iconClass={FontAwesomeIcon}
+						iconName={'pencil'}
+						iconColor={'#000000'}
+						iconSize={20}
+						labelStyle={{ color: '#7C7C7C' }}
+						inputStyle={{ color: '#7C7C7C' }}
+					/>
+					<Sae
+						style={{ margin: 20, }}
+						label={'senha'}
+						iconClass={FontAwesomeIcon}
+						iconName={'pencil'}
+						iconColor={'#000000'}
+						iconSize={20}
+						labelStyle={{ color: '#7C7C7C' }}
+						inputStyle={{ color: '#7C7C7C' }}
+					/>
 
-						<ButtonComponent labelButton={'ENTRAR'} />
-						<Button transparent style={StyleSheet.flatten(styles.buttonTransparent)} >
-       <Text style={StyleSheet.flatten(styles.textButton)} onPress={() =>navigate('ForgotPassword')}>Esqueceu a senha?</Text>
-       </Button>
-					</View>
-					</Image>
-				);
+					<ButtonComponent labelButton={'ENTRAR'} />
+					<Button transparent style={StyleSheet.flatten(styles.buttonTransparent)} >
+						<Text style={StyleSheet.flatten(styles.textButton)} onPress={() => navigate('ForgotPassword')}>Esqueceu a senha?</Text>
+					</Button>
+				</View>
+			</Image>
+		);
 
 
 	}

@@ -46,7 +46,7 @@ export default class OnBoarding extends Component {
 
 	componentDidMount() {
 		SplashScreen.hide()
-	  }	
+	}
 
 	componentWillMount() {
 		this._panResponder = PanResponder.create({
@@ -87,11 +87,11 @@ export default class OnBoarding extends Component {
 					justifyContent: 'center',
 					alignItems: 'center'
 				}, { width: this.state.size.width }]}>
-					<Button full block style={{ backgroundColor: '#CF606A', marginTop: 10, marginLeft: 7, width: 140, height: 35,borderRadius: 8 }}>
-						<Text style={{ color: '#FFFFFF', fontSize: 13 }} onPress={() =>navigate('Login')}>ENTRAR</Text>
+					<Button full block style={{ backgroundColor: '#CF606A', marginTop: 10, marginLeft: 7, width: 140, height: 35, borderRadius: 8 }}>
+						<Text style={{ color: '#FFFFFF', fontSize: 13 }} onPress={() => navigate('Login')}>ENTRAR</Text>
 					</Button>
 					<Button full block style={{ backgroundColor: '#CF606A', marginTop: 10, marginLeft: 20, width: 140, height: 35, borderRadius: 8 }}>
-						<Text style={{ color: '#FFFFFF', fontSize: 13}} onPress={() =>navigate('Register')}>CADASTRAR-SE</Text>
+						<Text style={{ color: '#FFFFFF', fontSize: 13 }} onPress={() => navigate('Register')}>CADASTRAR-SE</Text>
 					</Button>
 				</View>
 			</View>
