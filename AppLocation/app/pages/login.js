@@ -25,7 +25,7 @@ import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 import { Sae } from 'react-native-textinput-effects';
 
-import styles from '../styles/loginStyle';
+import styles from '../style/loginStyle';
 
 var ButtonComponent = require('./../components/buttonComponent');
 
