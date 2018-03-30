@@ -23,6 +23,7 @@ import Carousel from 'react-native-looped-carousel';
 
 const { width, height } = Dimensions.get('window');
 
+import SplashScreen from 'react-native-splash-screen';
 
 export default class OnBoarding extends Component {
 
@@ -42,6 +43,10 @@ export default class OnBoarding extends Component {
 		const layout = e.nativeEvent.layout;
 		this.setState({ size: { width: layout.width, height: layout.height } });
 	}
+
+	componentDidMount() {
+		SplashScreen.hide()
+	  }	
 
 	componentWillMount() {
 		this._panResponder = PanResponder.create({

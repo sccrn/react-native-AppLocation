@@ -15,10 +15,13 @@ import Profile from './app/pages/profile'
 import EditProfile from './app/pages/editProfile'
 import MyLocal from './app/pages/myLocal'
 import NewLocal from './app/pages/newLocal'
+import SplashScreen from 'react-native-splash-screen';
 
 var AppLocation;
+	
 
 if (Platform.OS == 'android') {
+
     AppLocation = StackNavigator({
         Splash: { screen: Splash },
         OnBoarding: { screen: OnBoarding },
