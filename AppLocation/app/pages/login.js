@@ -29,26 +29,19 @@ import styles from '../style/loginStyle';
 
 var ButtonComponent = require('./../components/buttonComponent');
 
-
-const saeInput = (
-	<Sae
-		label={'Email Address'}
-		iconClass={FontAwesomeIcon}
-		iconName={'pencil'}
-		iconColor={'white'}
-		// TextInput props
-		autoCapitalize={'none'}
-		autoCorrect={false}
-	/>
-);
-
 export default class Login extends Component {
 	static navigationOptions = {
 		headerBackTitle: null,
-		title: 'ENTRAR',
-		headerTintColor: '#FFFFFF',
+		headerTintColor: '#000000',
+		title: null,
 		headerStyle: {
-			backgroundColor: '#B72E33',
+			backgroundColor: null,
+			position: 'absolute',
+			backgroundColor: 'transparent',
+			zIndex: 100,
+			top: 0,
+			left: 0,
+			right: 0
 		},
 
 
@@ -79,7 +72,8 @@ export default class Login extends Component {
 		const { navigate } = this.props.navigation;
 
 		return (
-					<View style={StyleSheet.flatten(styles.viewBackground)}>
+			<Image source={require('../assets/img/background.png')}  style={StyleSheet.flatten(styles.backgroundImage)}>
+        		<View style={StyleSheet.flatten(styles.viewBackground)} {...this._panResponder.panHandlers}>
 						<Image source={require('../assets/img/loginLogo.png')} style={StyleSheet.flatten(styles.imgLogo)} />
 
 						<Sae
@@ -87,28 +81,28 @@ export default class Login extends Component {
 							label={'username'}
 							iconClass={FontAwesomeIcon}
 							iconName={'pencil'}
-							iconColor={'#A79395'}
-							iconSize={24}
-							labelStyle={{ color: '#A79395' }}
-							inputStyle={{ color: '#A79395' }}
+							iconColor={'#000000'}
+							iconSize={20}
+							labelStyle={{ color: '#7C7C7C' }}
+							inputStyle={{ color: '#7C7C7C' }}
 						/>
 						<Sae
 							style={{ margin: 20, }}
 							label={'senha'}
 							iconClass={FontAwesomeIcon}
 							iconName={'pencil'}
-							iconColor={'#A79395'}
-							iconSize={24}
-							labelStyle={{ color: '#A79395' }}
-							inputStyle={{ color: '#A79395' }}
+							iconColor={'#000000'}
+							iconSize={20}
+							labelStyle={{ color: '#7C7C7C' }}
+							inputStyle={{ color: '#7C7C7C' }}
 						/>
 
 						<ButtonComponent labelButton={'ENTRAR'} />
 						<Button transparent style={StyleSheet.flatten(styles.buttonTransparent)} >
        <Text style={StyleSheet.flatten(styles.textButton)} onPress={() =>navigate('ForgotPassword')}>Esqueceu a senha?</Text>
        </Button>
-
 					</View>
+					</Image>
 				);
 
 
