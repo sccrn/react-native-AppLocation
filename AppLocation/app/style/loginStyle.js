@@ -23,13 +23,6 @@ module.exports = StyleSheet.create({
             width:173,
 		},
 
-		temperatura: {
-			fontFamily: 'Helvetica Neue',
-			fontWeight: 'bold',
-			fontSize: 90,
-			textAlign: 'center',
-		},
-
 		buttonTransparent:{
 			alignSelf: 'center',
 		},

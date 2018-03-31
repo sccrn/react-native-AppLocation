@@ -13,7 +13,7 @@ module.exports = StyleSheet.create({
 		},
 
 		buttonStyle:{
-           backgroundColor: '#CF5C36',
+           backgroundColor: '#CF606A',
            borderRadius: 8,
         },
         

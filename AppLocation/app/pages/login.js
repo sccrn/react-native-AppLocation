@@ -32,16 +32,10 @@ var ButtonComponent = require('./../components/buttonComponent');
 export default class Login extends Component {
 	static navigationOptions = {
 		headerBackTitle: null,
-		headerTintColor: '#000000',
-		title: null,
+		headerTintColor: '#FFFFFF',
+		title: 'LOGIN',
 		headerStyle: {
-			backgroundColor: null,
-			position: 'absolute',
-			backgroundColor: 'transparent',
-			zIndex: 100,
-			top: 0,
-			left: 0,
-			right: 0
+			backgroundColor: '#AD343E',
 		},
 
 
@@ -74,10 +68,8 @@ export default class Login extends Component {
 		return (
 			<Image source={require('../assets/img/background.png')}  style={StyleSheet.flatten(styles.backgroundImage)}>
         		<View style={StyleSheet.flatten(styles.viewBackground)} {...this._panResponder.panHandlers}>
-						<Image source={require('../assets/img/loginLogo.png')} style={StyleSheet.flatten(styles.imgLogo)} />
-
 						<Sae
-							style={{ margin: 20, height:10, width:null }}
+							style={{ margin: 20, height:10, width:null, flex: 3 }}
 							label={'username'}
 							iconClass={FontAwesomeIcon}
 							iconName={'pencil'}
@@ -87,7 +79,7 @@ export default class Login extends Component {
 							inputStyle={{ color: '#7C7C7C' }}
 						/>
 						<Sae
-							style={{ margin: 20, }}
+							style={{ margin: 20, flex: 1}}
 							label={'senha'}
 							iconClass={FontAwesomeIcon}
 							iconName={'pencil'}
