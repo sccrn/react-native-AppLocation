@@ -21,15 +21,16 @@ import {
 	NavigationActions
 } from 'react-navigation';
 
+import styles from '../style/loginStyle';
 
-
+var ButtonComponent = require('./../components/buttonComponent');
 
 export default class Register extends Component {
 	static navigationOptions = {
 		title: 'CADASTRO',
 		headerTintColor: '#FFFFFF',
 		headerStyle: {
-			backgroundColor: '#B72E33',
+			backgroundColor: '#AD343E',
 		},
 
 
@@ -60,8 +61,10 @@ export default class Register extends Component {
 		const { navigate } = this.props.navigation;
 
 		return (
+			<Image source={require('../assets/img/background.png')}  style={StyleSheet.flatten(styles.backgroundImage)}>
 			<View>
 			</View>
+			</Image>
 		);
 
 
